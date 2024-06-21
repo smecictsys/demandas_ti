@@ -1,5 +1,4 @@
 import json, os, gspread
-from google.oauth2 import service_account
 from oauth2client.service_account import ServiceAccountCredentials
 
 class Autenticador:
