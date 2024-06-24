@@ -8,25 +8,40 @@
 
 header{
     background-color: #008080;
+    padding-top: 16px;
 }
 
 header > div.container {
     margin: 0 auto;
-    width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header > div.container > img#logo {
-    width: 500px;
+    width: 100%;
+    max-width: 256px;
 }
 
 header > div.container > h1#titulo_da_pagina {
+    color: #008080;
+    width: inherit;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+header > div.container > p {
     color: white;
     width: inherit;
     text-align: center;
+    font-family: sans-serif;
+    padding: 4px;
 }
 
 main {
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,17 +57,18 @@ form#demanda_de_ti {
 }
 
 form#demanda_de_ti > div.box {
-    width: 100%;
     height: 50px;
     font-size: 24px;
     padding: 4px;
     display: flex;
+    flex-direction: column;
 }
 
 form#demanda_de_ti > input#send{
     cursor: pointer;
     height: 50px;
-    width: 200px;
+    width: 100%;
+    max-width: 256px;
     margin-top: 16px;
     background-color: #008080;
     color: white;
@@ -71,6 +87,8 @@ div.box > label {
 }
 
 div.box > input[type=text] {
+    width: 100%;
+    max-width: 256px;
     height: inherit;
     flex-grow: 1;
     font-size: 24px;

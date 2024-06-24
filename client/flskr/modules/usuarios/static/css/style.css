@@ -1,0 +1,101 @@
+
+
+*{
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background-color: #008080;
+    padding-top: 16px;
+}
+
+header > div.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > div.container > img#logo {
+    width: 100%;
+    max-width: 256px;
+}
+
+header > div.container > h1#titulo_da_pagina {
+    color: #008080;
+    width: inherit;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+header > div.container > p {
+    color: white;
+    width: inherit;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 4px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+form#demanda_de_ti {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+form#demanda_de_ti > div.box {
+    height: 50px;
+    font-size: 24px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+form#demanda_de_ti > input#send{
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    max-width: 256px;
+    margin-top: 16px;
+    background-color: #008080;
+    color: white;
+    transition: all .2s ease-in;
+}
+
+form#demanda_de_ti > input#send:hover{
+    background-color: white;
+    color: #008080;
+    border: #008080 solid 1px;
+}
+
+div.box > label {
+    width: max-content;
+    margin-right: 8px;
+}
+
+div.box > input[type=text] {
+    width: 100%;
+    max-width: 256px;
+    height: inherit;
+    flex-grow: 1;
+    font-size: 24px;
+    padding-left: 4px;
+    border: solid #ccc 1px;
+}
+
+img#qr {
+    width: 300px;
+}
