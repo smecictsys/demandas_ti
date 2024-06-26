@@ -1,4 +1,4 @@
-from flask import Blueprint, url_for, request, jsonify
+from flask import Blueprint, url_for, request, jsonify, render_template
 from .bp_demandas import bp_demandas
 import qrcode
 
@@ -17,3 +17,7 @@ def criar_qrs():
     return jsonify({
         'request_url':url
     })
+
+@bp_ti.route('/menu')
+def ti_menu():
+    return render_template('main.html')

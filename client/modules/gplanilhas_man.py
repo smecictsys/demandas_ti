@@ -13,6 +13,10 @@ class GSheetManager:
     def _ativar_planilha(self):
         self._planilha_ativa = self._cliente.open(self._nome_planilha).worksheet(self._nome_pagina)
 
+    def definir_pagina(self, nome_da_pagina:str):
+        self._nome_pagina = nome_da_pagina
+        self._ativar_planilha()
+    
     def obter_dados(self) -> list:
         return self._planilha_ativa.get_all_values()
     

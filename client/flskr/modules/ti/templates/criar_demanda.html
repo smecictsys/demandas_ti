@@ -24,17 +24,12 @@
             </ul>
         {% else %}
             <form id="demanda_de_ti" action="/ti/demandas/registrar_demanda" method="post">
-                <!-- <div class="box">
-                    <label for="sala">Sala</label>
-                    <input type="text" name="sala" id="sala">
-                </div> -->
-                {{dados}}
                 <div class="box">
                     <select name="sala" id="sala" required>
                         <option value="" disabled selected>Selecione a sala</option>
                         {% if dados %}
                             {% for dado in dados %}
-                                <option value="{{dado[1]}}">{{dado[1]}}</option>
+                                <option value="{{dado}}">{{dado}}</option>
                             {% endfor %}
                         {% endif %}
                     </select>

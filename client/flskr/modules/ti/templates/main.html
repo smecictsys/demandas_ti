@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('ti.demandas.static', filename='css/style.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
+            <h1 id="titulo_da_pagina" >Demanda de TI</h1>
+            <p>Menu principal</p>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="btn-menu" href="/ti/demandas/listar_todas">Lista de demandas</a>
+            </li>
+            <li>
+                <a class="btn-menu" href="/ti/demandas/criar_demanda">Criar nova demanda</a>
+            </li>
+            <li>
+                <a class="btn-menu" href="/usuarios/gerir/cadastro">Cadastrar novo solicitante</a>
+            </li>
+            <li>
+                <a class="btn-menu" href="/colabs/gerir/cadastro">Cadastrar novo colaborador</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

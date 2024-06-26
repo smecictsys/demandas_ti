@@ -20,6 +20,7 @@ header > div.container {
 }
 
 header > div.container > img#logo {
+    display: none;
     width: 100%;
     max-width: 256px;
 }
@@ -48,6 +49,66 @@ main {
     margin: 0 auto;
 }
 
+nav.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu > ul {
+    list-style: none;
+    width: 100%;
+    max-width: 320px;
+}
+
+nav.menu > ul > li {
+    margin: 16px 0;
+    width: 100%;
+    display: flex;
+}
+
+nav.menu > ul > li > a.btn-menu {
+    font-size: 20px;
+    text-decoration: none;
+    flex-grow: 1;
+    color: #008080;
+    border: #008080 solid 1px;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+nav.menu > ul > li > a.btn-menu:hover {
+    background-color: #008080;
+    color: white;
+}
+
+table.lista_de_demandas{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.lista_de_demandas > tbody > tr.nova-demanda {
+    background-color: #e6914b;
+}
+
+table.lista_de_demandas > tbody > tr:hover {
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+}
+
+table.lista_de_demandas > th, td {
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 8px;
+    text-align: left;
+}
+
+table.lista_de_demandas > thead {
+    background-color: gray;
+    color: white;
+}
+
 form#demanda_de_ti {
     height: 300px;
     display: flex;
@@ -57,7 +118,7 @@ form#demanda_de_ti {
 }
 
 form#demanda_de_ti > div.box {
-    height: 50px;
+    /* height: 50px; */
     font-size: 24px;
     padding: 4px;
     display: flex;
@@ -86,11 +147,19 @@ div.box > label {
     margin-right: 8px;
 }
 
+div.box > select {
+    min-width: 256px;
+    height: 50px;
+    font-size: 24px;
+    border: solid #ccc 1px;
+    background-color: transparent;
+}
+
 div.box > input[type=text] {
     width: 100%;
     max-width: 256px;
-    height: inherit;
-    flex-grow: 1;
+    height: 50px;
+    /* flex-grow: 1; */
     font-size: 24px;
     padding-left: 4px;
     border: solid #ccc 1px;

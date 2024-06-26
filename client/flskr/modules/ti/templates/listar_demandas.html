@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de demandas</title>
+    <link rel="stylesheet" href="{{ url_for('ti.demandas.static', filename='css/style.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
+            <h1 id="titulo_da_pagina" >Demandas de TI</h1>
+            <p>Listagem</p>
+        </div>
+    </header>
+    <table class="lista_de_demandas">
+        <thead>
+            <th>
+                <td>Entrada</td>
+                <td>Solicitante</td>
+            </th>
+        </thead>
+        <tbody>
+            {% for entrada in data %}
+                <tr class="{% if hoje == entrada['entrada']%}nova-demanda{% else %}{% endif%}">
+                    <td>{{entrada['id']}}</td>
+                    <td>{{entrada['entrada']}}</td>
+                    <td>{{entrada['solicitante']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

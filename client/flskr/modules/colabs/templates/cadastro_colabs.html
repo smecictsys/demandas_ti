@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="{{ url_for('usuarios.gerir.static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('colabs.gerir.static', filename='css/style.css')}}">
 </head>
 <body>
     <header>
         <div class="container">
             <!-- <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia"> -->
             <h1 id="titulo_da_pagina" >Cadastro</h1>
-            <p>Formulário de cadastro de usuarios</p>
+            <p>Formulário de cadastro de colaboradores</p>
         </div>
     </header>
     <main>
-        <form id="cadastro_de_usuario" action="/usuarios/gerir/registrar_usuario" method="post">
+        <form id="cadastro_de_usuario" action="/colabs/gerir/registrar_colab" method="post">
             <div class="box">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
+            </div>
+            <div class="box">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
             </div>
             <div class="box">
                 <label for="sala">Sala</label>
@@ -27,7 +31,7 @@
             <input id="send" type="submit" value="Registrar demanda">
         </form>
         <p>Escaneie o QrCode abaixo para acessar esse formulario</p>
-        <img id="qr" src="{{ url_for('usuarios.gerir.static', filename='images/qrcode_usuarios_cadastro.png')}}" alt="qrcode">
+        <img id="qr" src="{{ url_for('colabs.gerir.static', filename='images/qrcode_colabs_cadastro.png')}}" alt="qrcode">
         <p>Este é um exemplo de como o formulario personalizado pode ser compartilhado</p>
     </main>
 </body>

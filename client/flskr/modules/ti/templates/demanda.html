@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe da demanda</title>
+    <link rel="stylesheet" href="{{ url_for('ti.demandas.static', filename='css/style.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
+            <h1 id="titulo_da_pagina" >Demandas de TI</h1>
+            <p>Detalhe da demanda {reg['id']}</p>
+        </div>
+    </header>
+    
+    <div>
+        <p><strong>ID</strong> {{reg['id']}}</p>
+        <p><strong>DATA</strong> {{reg['entrada']}}</p>
+        <p><strong>Solicitante</strong> {{reg['solicitante']}}</p>
+        <p><strong>Tipo</strong> {{reg['tipo']}}</p>
+        <p><strong>Descrição</strong> {{reg['desc']}}</p>
+    </div>
+</body>
+</html>
