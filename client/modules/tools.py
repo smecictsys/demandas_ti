@@ -1,3 +1,5 @@
+import bcrypt
+
 def compilar_dados(dados):
     dados_compilados = []
     for dado in dados:
@@ -36,3 +38,25 @@ def list_format(dados:list)-> dict:
             "status":dados[5]
         }
     return dados_temp
+
+def hash_do_token(string_input:str)-> str:
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(string_input.encode('utf-8'), salt)
+    return hashed
+
+def checar_token(token_reg, token_input):
+    token_inserido = token_input.encode('utf-8')
+    res = bcrypt.checkpw(token_inserido, token_reg)
+    return res
+
+def colab_format(colab:list)->dict:
+    return {
+        "nome":colab[1],
+        "email":colab[2],
+        "sala":colab[3],
+        "numero_demandas":colab[4]
+    }
+
+def auth_error() -> str:
+    msg = "Você não está autorizado a acessar esta área do sistema."
+    return msg

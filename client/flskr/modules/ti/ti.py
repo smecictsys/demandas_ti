@@ -1,4 +1,5 @@
-from flask import Blueprint, url_for, request, jsonify, render_template
+from flask import Blueprint, url_for, request, jsonify, render_template, session
+from modules.tools import auth_error
 from .bp_demandas import bp_demandas
 import qrcode
 
@@ -20,4 +21,6 @@ def criar_qrs():
 
 @bp_ti.route('/menu')
 def ti_menu():
-    return render_template('main.html')
+    if 'user' in session:
+        return render_template('main.html')
+    return auth_error()

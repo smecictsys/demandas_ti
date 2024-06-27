@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             {% for entrada in data %}
-                <tr class="{% if hoje == entrada['entrada']%}nova-demanda{% else %}{% endif%}">
+                <tr class="{% if hoje == entrada['entrada']%}nova-demanda{% else %}{% endif%}" onclick="abrir_demanda({{entrada['id']}})">
                     <td>{{entrada['id']}}</td>
                     <td>{{entrada['entrada']}}</td>
                     <td>{{entrada['solicitante']}}</td>
@@ -32,4 +32,10 @@
         </tbody>
     </table>
 </body>
+<script>
+    function abrir_demanda(demanda_id){
+        url = window.location.origin + `/ti/demandas/buscar/${demanda_id}`
+        window.location.href = url
+    }
+</script>
 </html>

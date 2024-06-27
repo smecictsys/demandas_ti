@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="{{ url_for('colabs.gerir.static', filename='css/style.css')}}">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <!-- <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia"> -->
-            <h1 id="titulo_da_pagina" >Cadastro</h1>
-            <p>Formulário de cadastro de colaboradores</p>
-        </div>
-    </header>
+{% extends 'layout_interno.html' %}
+{% block titulo %}Cadastro de colaborador{% endblock %}
+{% block titulo_header %}Cadastro de colaborador{% endblock %}
+{% block conteudo %}
     <main>
         <form id="cadastro_de_usuario" action="/colabs/gerir/registrar_colab" method="post">
             <div class="box">
@@ -34,5 +22,4 @@
         <img id="qr" src="{{ url_for('colabs.gerir.static', filename='images/qrcode_colabs_cadastro.png')}}" alt="qrcode">
         <p>Este é um exemplo de como o formulario personalizado pode ser compartilhado</p>
     </main>
-</body>
-</html>
+{% endblock %}

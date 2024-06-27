@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar demanda de ti</title>
-    <link rel="stylesheet" href="{{ url_for('ti.demandas.static', filename='css/style.css')}}">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
-            <h1 id="titulo_da_pagina" >Demanda de TI</h1>
-            <p>Formulário interno</p>
-        </div>
-    </header>
+{% extends 'layout_interno.html' %}
+{% block titulo %}Registro de demanda{% endblock %}
+{% block titulo_header %}Registro de demanda{% endblock %}
+{% block conteudo %}
     <main>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -51,5 +39,4 @@
         <img id="qr" src="{{ url_for('ti.demandas.static', filename='images/qrcode_demanda_ti.png')}}" alt="qrcode">
         <p>Este é um exemplo de como o formulario personalizado pode ser compartilhado</p>
     </main>
-</body>
-</html>
+{% endblock %}

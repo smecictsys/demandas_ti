@@ -165,6 +165,25 @@ div.box > input[type=text] {
     border: solid #ccc 1px;
 }
 
+div.demanda{
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 340px;
+    margin: 32px auto;
+    /* padding: 8px; */
+    border: #008080 solid 1px;
+}
+
+div.demanda > p {
+    padding: 16px 4px;
+}
+
+div.demanda > p.label {
+    background-color: #008080;
+    color: white;
+    padding: 4px;
+}
+
 img#qr {
     width: 300px;
 }

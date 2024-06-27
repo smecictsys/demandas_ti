@@ -11,16 +11,23 @@
         <div class="container">
             <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
             <h1 id="titulo_da_pagina" >Demandas de TI</h1>
-            <p>Detalhe da demanda {reg['id']}</p>
+            <p>Detalhe da demanda {{reg['id']}}</p>
         </div>
     </header>
     
-    <div>
-        <p><strong>ID</strong> {{reg['id']}}</p>
-        <p><strong>DATA</strong> {{reg['entrada']}}</p>
-        <p><strong>Solicitante</strong> {{reg['solicitante']}}</p>
-        <p><strong>Tipo</strong> {{reg['tipo']}}</p>
-        <p><strong>Descrição</strong> {{reg['desc']}}</p>
+    <div class="demanda">
+        <p class="label"><strong>Status</strong></p>
+        <p>{{reg['status']}}</p>
+        <p class="label"><strong>Tipo</strong></p>
+        <p>{{reg['tipo']}}</p>
+        <p class="label"><strong>ID</strong></p>
+        <p>{{reg['id']}}</p>
+        <p class="label"><strong>DATA</strong></p>
+        <p>{{reg['entrada']}}</p>
+        <p class="label"><strong>Solicitante</strong></p>
+        <p>{{reg['solicitante']}}</p>
+        <p class="label"><strong>Descrição</strong></p>
+        <p>{{reg['desc']}}</p>
     </div>
 </body>
 </html>

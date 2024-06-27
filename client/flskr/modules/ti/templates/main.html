@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="{{ url_for('ti.demandas.static', filename='css/style.css')}}">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <img id="logo" src="{{ url_for('ti.demandas.static', filename='images/logo2.png')}}" alt="logo da subsecretaria de tecnologia">
-            <h1 id="titulo_da_pagina" >Demanda de TI</h1>
-            <p>Menu principal</p>
-        </div>
-    </header>
-
+{% extends 'layout_interno.html' %}
+{% block titulo %}Inicio{% endblock %}
+{% block titulo_header %}Inicio{% endblock %}
+{% block conteudo %}
     <nav class="menu">
         <ul>
             <li>
@@ -31,5 +18,4 @@
             </li>
         </ul>
     </nav>
-</body>
-</html>
+{% endblock %}

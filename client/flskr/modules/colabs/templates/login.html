@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('colabs.gerir.static', filename='css/login.css')}}">
+    <title>LOGIN</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="login">
+                <form action="/colabs/gerir/autenticar" method="post">
+                    <div class="header">
+                        <h1>Login</h1>
+                    </div>
+                    <p>Acesso à área de gestão de TI</p>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                    <input type="submit" value="Entrar">
+                </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul class=flashes>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
